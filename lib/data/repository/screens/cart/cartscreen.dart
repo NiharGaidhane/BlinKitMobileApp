@@ -23,7 +23,7 @@ class Cartscreen extends StatelessWidget {
                       children: [
                         SizedBox(width: 20),
                         Uihelper.CustomText(
-                          text: "Blinkit in Nihar",
+                          text: "Blinkit in ",
                           color: Colors.black,
                           fontweight: FontWeight.bold,
                           fontsize: 14,
