@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:untitled/data/repository/screens/bottomnav/bottomnavscreen.dart';
+import 'package:get/get.dart';
+import 'package:untitled/data/repository/screens/otpscreen/otpscreen.dart';
 import 'package:untitled/data/repository/widget/uihelper.dart';
+
+
 
 class Loginscreen extends StatelessWidget {
   const Loginscreen({super.key});
@@ -34,21 +37,45 @@ class Loginscreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(40.0),
                 child: TextField(
                   keyboardType: TextInputType.phone, // Opens the phone keypad
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly // Allows only numbers
                   ],
                   decoration: const InputDecoration(
-                    labelText: 'Mobile Number',
-                    hintText: 'Enter 10-digit mobile number',
-                    prefixIcon: Icon(Icons.phone),
+                    hintText: '+91',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20))
+                      borderRadius: BorderRadius.all(Radius.circular(10))
                     ),
                   ),
                 ),
+              ),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: (){
+                      Get.to(otpscreen());
+                    },
+                    child: Text("Send OTP",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepPurple,
+                      ),
+
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Text("Terms and conditions",
+                  style: TextStyle(
+                  fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+                  )
+
+                ],
               ),
 
 
@@ -61,3 +88,7 @@ class Loginscreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
