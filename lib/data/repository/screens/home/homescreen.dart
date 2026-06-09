@@ -187,36 +187,48 @@ class Homescreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 5,),
-                    Padding(padding: EdgeInsets.only(left: 20),child: Uihelper.CustomText(
-                      text: category[index]["text"].toString(),
-                      color: Colors.black,
-                      fontweight: FontWeight.bold,
-                      fontsize: 8,
-                      fontfamliy: "bold",
-                    ),),
+                    SizedBox(height: 5),
+                    Padding(
+                      padding: EdgeInsets.only(left: 20),
+                      child: Uihelper.CustomText(
+                        text: category[index]["text"].toString(),
+                        color: Colors.black,
+                        fontweight: FontWeight.bold,
+                        fontsize: 8,
+                        fontfamliy: "bold",
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(right: 40),
                       child: Row(
                         children: [
                           Uihelper.CustomImage(img: "timer 4.png"),
-                          Uihelper.CustomText(text: "16 MINS", color: Colors.black38, fontweight: FontWeight.normal, fontsize: 10, fontfamliy: "normal"),
+                          Uihelper.CustomText(
+                            text: "16 MINS",
+                            color: Colors.black38,
+                            fontweight: FontWeight.normal,
+                            fontsize: 10,
+                            fontfamliy: "normal",
+                          ),
                         ],
                       ),
                     ),
-                    SizedBox(height: 5,),
+                    SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.only(right: 60),
                       child: Row(
                         children: [
                           Uihelper.CustomImage(img: "image 50 (1).png"),
-                          Uihelper.CustomText(text: "79", color: Colors.black38, fontweight: FontWeight.bold, fontsize: 15, fontfamliy: "normal"),
+                          Uihelper.CustomText(
+                            text: "79",
+                            color: Colors.black38,
+                            fontweight: FontWeight.bold,
+                            fontsize: 15,
+                            fontfamliy: "normal",
+                          ),
                         ],
                       ),
-                    )
-                  
-
-
+                    ),
                   ],
                 );
               },

@@ -1,9 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/data/repository/screens/cart/cartscreen.dart';
-import 'package:untitled/data/repository/screens/category/categoryscreen.dart';
+import 'package:untitled/data/repository/screens/newscreen/newscreen.dart';
 import 'package:untitled/data/repository/screens/home/homescreen.dart';
-import 'package:untitled/data/repository/screens/print/printscreen.dart';
+import 'package:untitled/data/repository/screens/story/story.dart';
 import 'package:untitled/data/repository/widget/uihelper.dart';
 
 class bottomnavscreen extends StatefulWidget {
@@ -17,9 +16,8 @@ class _bottomnavscreenState extends State<bottomnavscreen> {
   int CureentIndex = 0;
   List<Widget> Pages = [
     Homescreen(),
-    Cartscreen(),
-    CategoryScreen(),
-    Printscreen(),
+    Newscreen (),
+    story(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,7 @@ class _bottomnavscreenState extends State<bottomnavscreen> {
             icon: Uihelper.CustomImage(img: "shopping-bag 1.png"),label: "cart"),
 
           BottomNavigationBarItem(
-            icon: Uihelper.CustomImage(img: "category 1.png"),label: "categories"),
+            icon: Uihelper.CustomImage(img: "newscreen   1.png"),label: "categories"),
 
           BottomNavigationBarItem(
             icon: Uihelper.CustomImage(img: "printer 1.png"),label: "Print"
